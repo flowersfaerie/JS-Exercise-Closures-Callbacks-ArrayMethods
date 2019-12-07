@@ -87,8 +87,11 @@ function processLastItem(stringList, callback) {
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
 */
-function processSum(/* CODE HERE */) {
-  /* CODE HERE */
+function processSum(numberList, callback) {
+	const sum = numberList.reduce((acc, cur) => {
+		return acc + cur;
+	}, 0);
+	return callback(sum);
 }
 
 /**
@@ -109,8 +112,9 @@ function processSum(/* CODE HERE */) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
-  /* CODE HERE */
+function processProduct(num1, num2, callback) {
+	var product = num1 * num2;
+	return callback(product);
 }
 
 /**
