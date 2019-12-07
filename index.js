@@ -186,7 +186,7 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 */
 function getFullNames(runners) {
 	const fullName = [];
-	runners.forEach((runners) => fullName.push(`${runners.last_name}, ${runners.first_name}`))
+	runners.forEach((runners) => fullName.push(`${runners.last_name}, ${runners.first_name}`));
 	return fullName;
 }
 
@@ -202,8 +202,9 @@ function getFullNames(runners) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
-  /* CODE HERE */
+function firstNamesAllCaps(runners) {
+	const capFirstNames = runners.map((runners) => {return `${runners.first_name}`.toUpperCase()});
+	return capFirstNames;
 }
 
 /**
