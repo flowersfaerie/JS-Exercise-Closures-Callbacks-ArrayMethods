@@ -288,8 +288,17 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(max) {
+	var count = 0;
+	return function counter() {
+		if(count <= max) {
+			return count++
+		} 
+		else {
+			count = 0;
+			return count++
+		}
+	}
 }
 
 /////////////// END OF CHALLENGE ///////////////
